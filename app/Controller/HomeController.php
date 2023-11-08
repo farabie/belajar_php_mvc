@@ -14,6 +14,11 @@ class HomeController {
     function world(): void {
         echo "HomeController.world()";
     }
+
+    function author(): void
+    {
+        echo "Hello Author: Muhammad Farabie";
+    }
 }
 
 
