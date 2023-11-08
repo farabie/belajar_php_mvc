@@ -1,6 +1,7 @@
 <?php 
 
 namespace  BieProject\Belajar\PHP\MVC\Controller;
+use BieProject\Belajar\PHP\MVC\APP\View;
 
 
 class HomeController {
@@ -14,7 +15,7 @@ class HomeController {
             "content" => $content,
         ];
 
-        echo "HomeControleer.index()";
+        View::render("Home/index", $model);
     }
     function hello(): void {
         echo "HomeController.hello()";
