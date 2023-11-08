@@ -1,11 +1,11 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$path = '/index';
+use BieProject\Belajar\PHP\MVC\APP\Router;
 
-if(isset($_SERVER['PATH_INFO'])) {
-    $path = $_SERVER['PATH_INFO'];
-}
+Router::add('GET', '/', 'HomeController', 'index');
+Router::add('GET', '/login', 'UserController', 'index');
+Router::add('GET', '/register', 'UserController', 'index');
 
-
-require_once __DIR__ . '/../app/View/' . $path . '.php';
+Router::run();
 ?>
